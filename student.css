@@ -42,7 +42,8 @@ input, select{
 }
  @media (max-width: 767px) {
       .container {
-        max-width: 300px;
+        width: 90%; /* Adjust the container width as needed */
+        max-width: none;
         margin: 0 auto;
       }
 .container{
