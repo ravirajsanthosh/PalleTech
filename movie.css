@@ -46,10 +46,15 @@ h1{
     float: left;
   }
 
+  .logo-container{
+    float: left;
+    text-align: left;
+  }
+
   .navbar-item {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   .navbar-nav .nav-link {
