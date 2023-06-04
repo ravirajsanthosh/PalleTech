@@ -10,13 +10,38 @@
     font-size: large;
   }
 .card1{
-    min-width: auto;
-    min-height: auto;
+  float: left;
 }
 .card2{
-    min-width: auto;
-    max-height:auto;
+  float: inline-end;
 }
+h6{
+  font-weight: 600;
+  text-decoration: underline;
+}
+.text-start{
+  margin-top: -8px;
+}
+#bkgf {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card3{
+  float: right;
+}
+.card4{
+  float: inline-start;
+}
+a{
+  text-align: center;
+  margin: 0 auto;
+}
+h1{
+  text-align: center;
+  text-decoration:underline;
+}
+
 
   
   
