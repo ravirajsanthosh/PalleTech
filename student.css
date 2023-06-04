@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+#id, #lname{
+background-color:green;
+color:red;
+}
+
+.cblue{
+	background-color:blue;
+	color:white;
+}
+select{
+	background-color:orange;
+	color:#45ff12;
+}
+input[type=submit]
+{
+	background-color:aqua;
+	color:red;
+	border-radius: 25px;
+	margin-left:100px;
+	margin-bottom:-7px;
+	height:35px;
+	width:70px;
+	cursor: pointer;
+	border: 4px groove #0047AB;
+	font-family: Arial,cursive;
+	font-weight: bold;
+}
+.form-group{
+	display: flex;
+	align-items: center;
+	margin-bottom:7px;
+	margin-left:20px;
+}
+input, select{
+	border: 3px groove #000080;
+}
+.form-group label {
+	width:100px;
+	font-family: "Pacifico", cursive;
+}
+.container{
+	background-color:orange;
+	padding:5px;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	margin-right:75%;
+	
+	
+}
+body{
+	background-color:black;
+}

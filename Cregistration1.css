@@ -1,0 +1,40 @@
+label.red{
+    color:red;
+    }
+    label.black{
+    color:black;
+    }
+    .submit-button {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        font-size:17px;
+      }
+    .submit-button:hover {
+        background-color: blue;
+        color: white;
+      }
+    table{
+    margin: 0 auto;
+    }
+    .table-background td{
+    text-align: right;
+    font-size:17.5px;
+    }
+    .body-background{
+    background-image:url("https://images.pexels.com/photos/3571551/pexels-photo-3571551.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    .table-color{
+    background-color:brown;
+    height:250px;
+    width:450px;
+    }
+    caption{
+    font-size:22px;
+    text-decoration:underline;
+    color:red;
+    font-weight:bold;
+        }

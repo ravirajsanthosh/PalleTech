@@ -1,0 +1,22 @@
+.carousel-caption h2 {
+    font-weight: 600;
+    color: rgba(248, 106, 4, 0.859);
+  }
+  
+  .carousel-caption p {
+    font-family: 'Courier New', Courier, monospace;
+    color:whitesmoke;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: large;
+  }
+.card1{
+    min-width: auto;
+    min-height: auto;
+}
+.card2{
+    min-width: auto;
+    max-height:auto;
+}
+
+  
+  
