@@ -41,6 +41,21 @@ h1{
   text-align: center;
   text-decoration:underline;
 }
+@media (max-width: 767px) {
+  .navbar-brand {
+    float: left;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 10px;
+  }
+}
 
 
   
