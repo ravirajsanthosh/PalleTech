@@ -36,6 +36,7 @@ input, select{
 	border: 3px groove #000080;
 }
 .form-group label {
+	width:100%;
 	max-width:100px;
 	font-family: "Pacifico", cursive;
 }
