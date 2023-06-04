@@ -39,6 +39,11 @@ input, select{
 	max-width:100px;
 	font-family: "Pacifico", cursive;
 }
+ @media (max-width: 767px) {
+      .container {
+        max-width: 300px;
+        margin: 0 auto;
+      }
 .container{
 	background-color:orange;
 	padding:5px;
