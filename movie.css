@@ -46,7 +46,7 @@ h1{
     float: left;
   }
 
-  .navbar-nav {
+  .navbar-item {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
