@@ -51,7 +51,7 @@ h1{
     text-align: left;
   }
 
-  .navbar-item {
+  .social-media-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
