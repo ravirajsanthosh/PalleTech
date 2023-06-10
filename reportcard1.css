@@ -31,12 +31,6 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-
-  .container > div label,
-  .container > div input {
-    flex-basis: 45%;
-    margin-bottom: 10px;
-  }
 }
  .green{
     color: green;
