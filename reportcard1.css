@@ -70,7 +70,6 @@ body {
   .tableinput th,
   .tableinput td {
     border: none;
-    padding-right: 1px;
     text-align: left;
     display:inline-block;
   }
