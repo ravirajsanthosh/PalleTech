@@ -30,7 +30,6 @@ body {
     flex-direction:column;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .container > div label,
