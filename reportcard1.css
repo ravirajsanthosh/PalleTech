@@ -25,6 +25,20 @@ body {
         color: blue;
         position: relative;
  }
+ @media (max-width: 600px) {
+  .container > div {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .container > div label,
+  .container > div input {
+    flex-basis: 45%;
+    margin-bottom: 10px;
+  }
+}
  .green{
     color: green;
  }
