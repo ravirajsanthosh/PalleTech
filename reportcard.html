@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Card</title>
+    <link
+      rel="stylesheet"
+      href="https://ravirajsanthosh.github.io/palletech.github.io/reportcard1.css"
+    />
+    <style>
+      .black {
+        color: black;
+      }
+    </style>
+    <script type="text/javascript">
+      function writeText(label, value) {
+        document.write("<span>" + label + ": </span>");
+        document.write('<span class="green">' + value + "</span><br>");
+      }
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar bg-primary navbar-expand-lg bg-body-tertiary"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">RRS</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="reportcard.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All assignments
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://ravirajsanthosh.github.io/palletech.github.io/calculator.html"
+                    >Calculator</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://ravirajsanthosh.github.io/palletech.github.io/smallestNumber.html"
+                    >Smallest Number</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://ravirajsanthosh.github.io/palletech.github.io/dayName.html"
+                    >Day Name</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://ravirajsanthosh.github.io/palletech.github.io/operations.html"
+                    >Operations</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://ravirajsanthosh.github.io/palletech.github.io/array.html"
+                    >Array</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <h3>Student Report Card:</h3>
+    <br />
+    <div class="container">
+      <form id="form" action="reportcard.html" method="post">
+        <table class="tableinput">
+          <tr>
+            <td>
+              <label for="name">Name:</label>
+            </td>
+            <td class="same">
+              <input type="text" id="name" class="user-input" />
+            </td>
+            <td>
+              <label for="roll">Roll No:</label>
+            </td>
+            <td>
+              <input type="number" id="roll" class="user-input" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="javascript">JavaScript marks:</label>
+              <input
+                type="number"
+                id="javascript"
+                class="user-input"
+                pattern="^(?:\d{2}|100)$"
+              />
+            </td>
+            <td>
+              <label for="java">Java marks:</label>
+              <input
+                type="number"
+                id="java"
+                class="user-input"
+                pattern="^(?:\d{2}|100)$"
+              />
+            </td>
+            <td class="bottom">
+              <label for="sql">SQL marks:</label>
+            </td>
+            <td>
+              <input
+                type="number"
+                id="sql"
+                class="user-input"
+                pattern="^(?:\d{2}|100)$"
+              />
+            </td>
+            <td>
+              <label for="webtech">WebTech marks:</label>
+              <input
+                type="number"
+                id="webtech"
+                class="user-input"
+                pattern="^(?:\d{2}|100)$"
+              />
+            </td>
+            <td>
+              <label for="bootstrap">Bootstrap marks:</label>
+              <input
+                type="number"
+                id="bootstrap"
+                class="user-input"
+                pattern="^(?:\d{2}|100)$"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" value="Calculate" id="calculate" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Total</th>
+        <th>Average</th>
+      </tr>
+      <tr>
+        <td id="nameCell"></td>
+        <td id="rollCell"></td>
+        <td id="totalCell"></td>
+        <td id="averageCell"></td>
+      </tr>
+    </table>
+    <script>
+      const nameInput = document.getElementById("name");
+      const rollInput = document.getElementById("roll");
+      const marks1Input = document.getElementById("javascript");
+      const marks2Input = document.getElementById("java");
+      const marks3Input = document.getElementById("sql");
+      const marks4Input = document.getElementById("webtech");
+      const marks5Input = document.getElementById("bootstrap");
+      const calculateButton = document.getElementById("calculate");
+      const nameCell = document.getElementById("nameCell");
+      const rollCell = document.getElementById("rollCell");
+      const totalCell = document.getElementById("totalCell");
+      const averageCell = document.getElementById("averageCell");
+      function validateMarksInput(input) {
+        const value = input.value;
+        if (
+          value !== "" &&
+          (value < 0 || value > 100 || !/^(?:\d{2}|100)$/.test(value))
+        ) {
+          input.setCustomValidity(
+            "Marks should be in the format of 2 digits or 100"
+          );
+          input.classList.add("error");
+          input.setAttribute(
+            "title",
+            "Error: Marks should be in the format of 2 digits or 100"
+          );
+        } else {
+          input.setCustomValidity("");
+          input.classList.remove("error");
+          input.removeAttribute("title");
+        }
+      }
+
+      calculateButton.addEventListener("click", () => {
+        const marks1 = parseInt(marks1Input.value);
+        const marks2 = parseInt(marks2Input.value);
+        const marks3 = parseInt(marks3Input.value);
+        const marks4 = parseInt(marks4Input.value);
+        const marks5 = parseInt(marks5Input.value);
+
+        validateMarksInput(marks1Input);
+        validateMarksInput(marks2Input);
+        validateMarksInput(marks3Input);
+        validateMarksInput(marks4Input);
+        validateMarksInput(marks5Input);
+
+        if (
+          !marks1Input.checkValidity() ||
+          !marks2Input.checkValidity() ||
+          !marks3Input.checkValidity() ||
+          !marks4Input.checkValidity() ||
+          !marks5Input.checkValidity()
+        ) {
+          return;
+        }
+
+        const name = nameInput.value;
+        const roll = rollInput.value;
+
+        const total = marks1 + marks2 + marks3 + marks4 + marks5;
+        const average = total / 5;
+
+        nameCell.textContent = name;
+        nameCell.classList.add("black");
+        rollCell.textContent = roll;
+        rollCell.classList.add("black");
+        totalCell.textContent = total;
+        totalCell.classList.add("black");
+        averageCell.textContent = average.toFixed(2);
+        averageCell.classList.add("black");
+      });
+
+      marks1Input.addEventListener("input", () => {
+        validateMarksInput(marks1Input);
+      });
+
+      marks2Input.addEventListener("input", () => {
+        validateMarksInput(marks2Input);
+      });
+
+      marks3Input.addEventListener("input", () => {
+        validateMarksInput(marks3Input);
+      });
+
+      marks4Input.addEventListener("input", () => {
+        validateMarksInput(marks4Input);
+      });
+
+      marks5Input.addEventListener("input", () => {
+        validateMarksInput(marks5Input);
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
