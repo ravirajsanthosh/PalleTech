@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://ravirajsanthosh.github.io/palletech.github.io/small.css"
+    />
+    <script type="text/javascript">
+      function getValues() {
+        num1 = parseInt(document.getElementById("tbf").value);
+        num2 = parseInt(document.getElementById("tbs").value);
+        num3 = parseInt(document.getElementById("tbt").value);
+      }
+
+      function check() {
+        getValues();
+        if (num1 < num2 && num1 < num3) {
+          document.getElementById("tbr").value =
+            num1 + " is the smallest number.";
+        } else if (num2 < num3) {
+          document.getElementById("tbr").value =
+            num2 + " is the smallest number.";
+        } else {
+          document.getElementById("tbr").value =
+            num3 + " is the smallest number.";
+        }
+        Displayed();
+      }
+
+      function Displayed() {
+        document.getElementById("tbr").value = res;
+      }
+    </script>
+  </head>
+  <body>
+    <nav
+      class="navbar bg-primary navbar-expand-lg bg-body-tertiary"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">RRS</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="reportcard.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All assignments
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="calculator.html">calculator</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="smallestNumber.html"
+                    >smallest Number</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="dayName.html">Day Name</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="operations.html">Operations</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="array.html">Array</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <form>
+      <div class="cal-card d-flex flex-column justify-content-center">
+        <div class="d-inline-flex justify-content-center">
+          <div class="cal">
+            <h1>Find the Smallest Number</h1>
+            <div class="d-flex flex-column">
+              <input type="number" id="tbf" placeholder="Enter First Number" />
+              <input type="number" id="tbs" placeholder="Enter Second Number" />
+              <input type="number" id="tbt" placeholder="Enter Third Number" />
+              <input
+                type="text"
+                id="tbr"
+                placeholder="Result Will Be Displayed"
+                readonly
+              />
+              <div class="d-grid gap-1">
+                <input
+                  type="button"
+                  id="scheck"
+                  class="btn btn-dark"
+                  value="Check"
+                  onclick="check()"
+                />
+              </div>
+              <input
+                type="submit"
+                id="submit"
+                class="btn btn-danger btn-outline-light"
+                value="Clear"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

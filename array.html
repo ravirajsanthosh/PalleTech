@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://ravirajsanthosh.github.io/palletech.github.io/small.css"
+    />
+    <script type="text/javascript">
+      let numbers = []; // Array to store the numbers
+      let currentIndex = 0; // Index of the current number to display
+
+      function displayNextNumber() {
+        let numberDisplay = document.getElementById("numberDisplay");
+        if (currentIndex < numbers.length) {
+          numberDisplay.value = numbers[currentIndex];
+          currentIndex++;
+        } else {
+          numberDisplay.value = "No more numbers to display";
+        }
+      }
+
+      window.addEventListener("DOMContentLoaded", function () {
+        let input = document.getElementById("numbersInput");
+
+        input.addEventListener("input", function () {
+          numbers = input.value
+            .trim()
+            .split(" ")
+            .map((num) => parseInt(num));
+          currentIndex = 0;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav
+      class="navbar bg-primary navbar-expand-lg bg-body-tertiary"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">RRS</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="reportcard.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All assignments
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="calculator.html">calculator</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="smallestNumber.html"
+                    >smallest Number</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="dayName.html">Day Name</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="operations.html">Operations</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="array.html">Array</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <form>
+      <div class="cal-card d-flex flex-column justify-content-center">
+        <div class="d-inline-flex justify-content-center">
+          <div class="cal">
+            <h1>Store and Display Numbers</h1>
+            <div class="d-flex flex-column">
+              <input
+                type="text"
+                id="numbersInput"
+                placeholder="Enter Numbers Separated by Spaces"
+              />
+              <input
+                type="button"
+                class="btn btn-dark"
+                value="Display Next Number"
+                onclick="displayNextNumber()"
+              />
+              <input
+                type="text"
+                id="numberDisplay"
+                placeholder="Number will be displayed here"
+                readonly
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
