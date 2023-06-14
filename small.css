@@ -1,0 +1,33 @@
+.cal-card{
+    height:100vh;
+    background-color:hsl(46, 89%, 49%);
+    text-align: center;
+  }
+  .cal{
+    text-align: center;
+    border-style: double;
+    border-radius: 25px;
+    border-width: 7.5px;
+    padding: 50px;
+  }
+
+input{
+ border: solid 1px black;
+  }
+  #tbs{
+    border-top: 0px;
+    border-bottom: 0px;
+  }
+  #scheck{
+    margin-bottom: 10px;
+  }
+  #tbr{
+    margin-top: 5px;
+    margin-bottom:5px;
+    border: solid 1.6px black;
+  }
+
+  label{
+      color: chocolate;
+  }
+  

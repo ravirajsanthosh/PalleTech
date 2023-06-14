@@ -1,0 +1,33 @@
+.cal-card{
+  height:100vh;
+  background-color:burlywood;
+  text-align: center;
+}
+.cal{
+  text-align: center;
+  border: solid 2px black;
+  border-radius: 25px;
+  border-width: auto;
+  padding: 50px;
+}
+input + input{
+  border: solid 1px black;
+  margin-bottom: 1px;
+}
+#tbf{
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: 0px;
+}
+#submit{
+  margin-bottom: 5px;
+}
+#tbr{
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+label{
+    color: chocolate;
+}
